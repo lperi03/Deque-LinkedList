@@ -27,8 +27,14 @@ public class LinkedListDeque<T> implements Iterable<T> {
         headSentinel = new ItemNode(null, null, null);
         tailSentinel = new ItemNode(null, null, null);
 
+        size = 0;
         headSentinel.next = tailSentinel;
         tailSentinel.prev = headSentinel;
     }
+
+    public int size() {
+        return size;
+    }
+
 
 }
